@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WinCleaner</title>
+		<link rel="stylesheet" href="window.css">
+		<script type="application/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="application/javascript" src="window.js"></script>
+		<link href="bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+	  <div class="main-content">
+		  <div class="container-fluid">
+			  <div class = "col-sm-5">
+					<div class="logo-container">
+						<img src="img/logo.png">
+					</div>
+	        <div id="mymodal" class="modal_warning">
+	            <div class="modal-content">
+	                <div id="modal-header" class="modal-header">
+	                  <label id="headline" class="headline">FORM DATA - WARNING!</label>
+	                </div>
+	                <div id="modal-body" class="modal-body">
+	                  <div class="modal-body-comment">
+	                    <label id="offer" class="offer">This will erase your saved Form Data, so the next time you go to a website form, the fields will not be automatically filled in for you. You will have to enter in all of the fields.</label>
+	                    <label class="question">Do you wish to continue?.</label>
+	                  </div>
+	                  <div id="button" class="button_group">
+	                      <button id="yes" class="yes" type="button">YES</button>
+	                      <button id="no" class="no" type="button">NO</button>
+	                  </div>
+	                </div>
+	            </div>
+        	</div>
+        	<div id="mymodal_select" class="modal_select">
+	            <div class="modal-content">
+	                <div id="modal-header_select" class="modal-header_select">
+	                  <label id="headline_select" class="headline_select">Select All Option - Exception!</label>
+	                </div>
+	                <div id="modal-body_select" class="modal-body_select">
+	                  <div class="modal-body-comment_select">
+	                    <label id="offer_select" class="offer_select">Form Data and Passwords options will not be selected. If you want to clean the Form Data and/or Passwords you will have to select each item individually.</label>
+	                  </div>
+	                  <div id="button_select" class="button_group_select">
+	                      <button id="continue" class="continue" type="button">Continue</button>
+	                  </div>
+	                </div>
+	            </div>
+        	</div>
+				  <button id="start_scan_btn">START SCAN</button>
+				  <a id="help-link" target="_blank" href="http://www.wincleaner.org/chromeos"><sapn id="click">Click here</sapn> - for more tips on how to make your Chrome Browser or ChromeBook run faster!</a>
+			  </div>
+			  <div class="col-sm-7">
+				  <div class="inner-content">
+					  <div class="section-details">
+						  <h3 class="details-header">
+							  WinCleaner One Click Status
+						  </h3>
+						  <div id = "state" class="clearfix" >
+							  <label class="pull-left">Last Oneclick Cleanup:</label>
+							  <label class="pull-right" id = "clean_state">Not yet completed</label>
+						  </div>
+						  <div class = "item_list">
+							  <ul id="items" class="col-sm-12">
+								  <div class="row" style="margin-bottom: 15px;">
+									  <li data-remove="history" class="col-sm-3" style="text-align: center; cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_history_full.png">
+										  <div id="item_letter">History</div>
+									  </li>
+									  <li data-remove="cache" class="col-sm-3" style="text-align: center; margin-left: -15px;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_cache_full.png">
+										  <div id="item_letter">Cache</div>
+									  </li>
+									  <li data-remove="localStorage" class="col-sm-3" style="text-align: center;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_localStorage_full.png">
+										  <div id="item_letter">Local Storage</div>
+									  </li>
+									  <li data-remove="indexedDB"  class="col-sm-3" style="text-align: center;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_indexedDB_full.png">
+										  <div id="item_letter">Indexed DB</div>
+									  </li>
+								  </div>
+								  <div class="row" style="margin-bottom: 15px;">
+									  <li data-remove="appcache" class="col-sm-3" style="text-align: center;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_appcache_full.png">
+										  <div id="item_letter">App Cache</div>
+									  </li>
+									  <li data-remove="cookies" class="col-sm-3" style="text-align: center;  margin-left: -15px;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_cookies_full.png">
+										  <div id="item_letter">Cookies</div>
+									  </li>
+									  <li data-remove="fileSystems" class="col-sm-3" style="text-align: center;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_fileSystems_full.png">
+										  <div id="item_letter">FIle Systems</div>
+									  </li>
+									  <li data-remove="pluginData" class="col-sm-3" style="text-align: center;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_pluginData_full.png">
+										  <div id="item_letter">Plugin Data</div>
+									  </li>
+								  </div>
+								  <div class="row col-sm-offset-1">
+									  <li data-remove="downloads" class="col-sm-3 col-sm-offset-1" style="text-align: right; margin:0 4px 0 10px;cursor: pointer; padding-left: 5px;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel" style="margin-left: 30px;"></div>
+										  </div>
+										  <img src="img/ic_downloads_empty.png">
+										  <div id="item_letter">Download Links</div>
+									  </li>
+									  <li data-remove="formData" id = "formData" class="disabled col-sm-3" style="text-align: center;  margin-left: 20px;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_formData_full.png">
+										  <div id="item_letter">Form Data</div>
+									  </li>
+									  <li data-remove="passwords" id = "passwords" class="disabled col-sm-3" style="text-align: center;cursor: pointer;">
+										  <div class="cssload-container">
+											  <div class="cssload-speeding-wheel"></div>
+										  </div>
+										  <img src="img/ic_passwords_empty.png">
+										  <div id="item_letter">Passwords</div>
+									  </li>
+								  </div>
+							  </ul>
+							  <label id="select-all-label">
+								  <input type="checkbox" class="select-all" id="select-all">
+								  <span id="select-all-text">Select all </span>
+								  <sapn id = "comment"> Click any icon to select or unselect</span>
+							  </label>
+						  </div>
+					  </div>
+					  <div class="block">
+						  <h1 id="help-text">AppCache - Deletes temporary data stored by application, to free up spase.</h1>
+					  </div>
+					  <div class="version">
+					  	<h1 id="version">WinCleaner for ChromeOS Version 2.3</h1>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</body>
+</html>
